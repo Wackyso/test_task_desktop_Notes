@@ -1,0 +1,29 @@
+﻿<Window x:Class="test_task_desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test_task_desktop"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListView Name ="Notes" HorizontalAlignment="Left" Height="287" Margin="497,20,0,0" VerticalAlignment="Top" Width="286" SelectionChanged="Notes_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Path=id}"/>
+                    <GridViewColumn Header="Note" DisplayMemberBinding="{Binding Path=text}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label x:Name="test" Content="Label" HorizontalAlignment="Left" Margin="254,40,0,0" VerticalAlignment="Top" Height="81" Width="238"/>
+        <TextBox x:Name="NoteEditBox" HorizontalAlignment="Left" Height="42" Margin="497,312,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="286"/>
+        <Button x:Name="EditNoteButton" Content="Edit" HorizontalAlignment="Left" Margin="497,359,0,0" VerticalAlignment="Top" Width="198" Height="45" Click="Button_Click_For_action"/>
+        <Button Content="Show notes" HorizontalAlignment="Left" Margin="22,27,0,0" VerticalAlignment="Top" Width="215" Height="54" Click="Show_notes_Button_Click"/>
+        <Button Content="Create note" HorizontalAlignment="Left" Margin="22,86,0,0" VerticalAlignment="Top" Width="215" Height="54" Click="Create_Note_Button_Click"/>
+        <Button Content="Update note" HorizontalAlignment="Left" Margin="22,145,0,0" VerticalAlignment="Top" Width="215" Height="54" Click="Update_Note_Button_Click"/>
+        <Button Content="Delete note" HorizontalAlignment="Left" Margin="22,204,0,0" VerticalAlignment="Top" Width="215" Height="54" Click="Delete_Note_Button_Click"/>
+
+
+
+    </Grid>
+</Window>
